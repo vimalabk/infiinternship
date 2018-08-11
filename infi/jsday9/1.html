@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Arrays</title>
+</head>
+<body>
+<p id="demo"></p>
+<script type="text/javascript">
+var person={
+firstName:"guotham",
+lastName:"R",
+age:27,
+fullName:function(){
+return this.firstName+" "+this.lastName;<!--this keyword in a function defination this refers to ower of a function in our example this keyword refers to person objectthe person object owns fullname function or method-->
+}
+};
+document.getElementById('demo').innerHTML=person.fullName();
+</script>
+</body>
+</html>

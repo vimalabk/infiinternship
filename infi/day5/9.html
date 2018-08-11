@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>grid layouts</title>
+<style>
+body{
+display:grid;
+grid-template-areas:"header header header" "nav article ads" "footer footer footer";
+grid-template-rows:80px 1fr 70px;
+grid-template-columns:20% 1fr 15%;
+grid-row-gap:10px;
+grid-column-gap:10px;
+height:100vh;
+margin:0;
+}
+header,footer,article,nav,div{
+padding:1.2em;
+background-color:powderblue;
+}
+#pageheader{
+grid-area:header;
+text-align:center;
+}
+#pagefooter{
+grid-area:footer;
+}
+#mainarticle{
+grid-area:article;
+}
+#mainnav{
+grid-area:nav;
+}
+#sideads{
+grid-area:ads;
+}
+.mop{
+top:75%;
+left:20%;
+bottom:20%;
+}
+</style>
+</head>
+<body>
+<header id="pageheader"> infidata technologies</header>
+<article id="mainarticle">Article</article><!--article tag defines an indipendent self contain data-->
+<nav id="mainnav"> Navigation
+<img src="vimu.jpg" width="200px" height="200px">
+<img src="vim.jpg" width="200px" height="200px" class="mop"></nav>
+<div id="sideads">Advertisement
+<img src="imgs.jpg" width="200px" height="200px"></div>
+<footer id="pagefooter">Footer</footer>
+</body>
+</html>
